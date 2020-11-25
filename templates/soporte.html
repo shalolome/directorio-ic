@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+{% load crispy_forms_tags %}
+{% block titulo %}Soporte Técnico{% endblock titulo %}
+{% block cuerpo %}
+
+<div class="jumbotron">
+    <h1 class="display-4">Soporte Técnico</h1>
+    <p class="lead">Bienvenido al soporte tecnico, si tiene alguna duda, consulta o opinión, puede usar los datos
+        informativos para contactarse</p>
+    <hr class="my-4">
+    <p>En caso necesite cambiar de información o presente un inconveniente de robo de identidad comuniquese
+        inmediatamente con soporte técnico con una copia de cédula un número en lo cual nos podamos contactar con usted,
+        su solicitud será atendida de inmediato</p>
+
+    <ul class="list-group">
+        <li class="list-group-item active">Información</li>
+        <li class="list-group-item"><a><strong>Celular:</strong></a> 0986422453</li>
+        <li class="list-group-item"><a><strong>Correo:</strong></a> soportetecnico@gmail.com</li>
+    </ul>
+
+    <br>
+
+    <a class="btn btn-primary btn-lg" href="{% url 'index' %}" role="button">Búsqueda de Profesionales</a>
+</div>
+
+{% endblock cuerpo %}

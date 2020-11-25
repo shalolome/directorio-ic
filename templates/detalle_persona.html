@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+{% load crispy_forms_tags %}
+{% block titulo %}Detalle de Profesional{% endblock titulo %}
+{% block cuerpo %}
+
+<div class="jumbotron">
+    <h1 class="display-4">Detalle de Registro</h1>
+    <p class="lead">Detalle del registro general del profesional de Ingeniería Civil.</p>
+    <hr class="my-4">
+    <p>Información detallada.</p>
+    <a class="btn btn-primary btn-lg" href="{% url 'index' %}" role="button">Búsqueda de Profesionales</a>
+</div>
+
+<div class="container">
+    <form method="POST" enctype="multipart/form-data">
+        <h1 class="display-4">Detalle del Profesional</h1>
+        <div class="form-group">
+            {% csrf_token %}
+            {{ form|crispy }}
+        </div>
+
+        <a class="btn btn-primary" href="{% url 'index' %}" role="button">Regresar</a>
+    </form>
+</div>
+
+<p></p>
+
+{% endblock cuerpo %}

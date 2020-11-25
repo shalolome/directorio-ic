@@ -1,0 +1,19 @@
+{% extends 'index.html' %}
+{% load crispy_forms_tags %}
+{% block titulo %}Página Principal{% endblock titulo %}
+{% block cuerpo %}
+
+<div class="jumbotron">
+    <h1 class="display-4">Guía de Profesionales</h1>
+    <p class="lead">Sitio Web dedicado al manejo de información de los profesionales de la Carrera de
+        Ingeniería Civil. Puede realizar búsquedas de los profesionales que han sido validados dentro del Sistema.
+    Actualización permanente de los registros.</p>
+    <hr class="my-4">
+    <p>Aquí encontrarán toda la guía de profesionales de diferentes áreas que usted necesite.</p>
+
+    <br>
+
+    <a class="btn btn-primary btn-lg" href="{% url 'index' %}" role="button">Búsqueda de Profesionales</a>
+</div>
+
+{% endblock cuerpo %}

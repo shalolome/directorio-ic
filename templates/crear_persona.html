@@ -1,0 +1,39 @@
+{% extends 'index.html' %}
+{% load crispy_forms_tags %}
+{% block titulo %}Formulario de Persona{% endblock titulo %}
+{% block cuerpo %}
+
+<div class="jumbotron">
+    <h1 class="display-4">Formulario de Registro</h1>
+    <p class="lead">Aplicación Web dedicada para el manejo de información de los profesionales de la Carrera de
+        Ingeniería
+        Civil.</p>
+    <hr class="my-4">
+    <p>Formulario de Registro.</p>
+    <a class="btn btn-primary btn-lg" href="{% url 'index' %}" role="button">Búsqueda de Profesionales</a>
+</div>
+
+<div class="container">
+    <form method="POST" enctype="multipart/form-data">
+        <h1 class="display-4">Información General</h1>
+        <div class="form-group">
+            {% csrf_token %}
+            {{ form|crispy }}
+        </div>
+
+        <button class="btn btn-primary" type="submit">CREAR O EDITAR</button>
+        <a class="btn btn-primary" href="{% url 'index' %}" role="button">Regresar</a>
+    </form>
+</div>
+
+<p></p>
+
+<hr class="my-4">
+<p><strong> ***Sus datos entrarán en un proceso de validación de un máximo de 48 horas, pasado el tiempo podrá
+        visualizar su información en nuestra página***
+    </strong> </p>
+
+<hr class="my-4">
+<p></p>
+
+{% endblock cuerpo %}
